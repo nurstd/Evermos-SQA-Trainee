@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-11T07:52:11.751Z",
+    "end": "2022-11-11T07:52:12.237Z",
+    "duration": 486,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7cc7450b-2a22-4de4-b9ad-bb8b2ab4ab1c",
+      "title": "",
+      "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+      "file": "/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "83e471f6-67af-474b-a9a6-af67fb6c2d0f",
+          "title": "Login...............",
+          "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+          "file": "/test1.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User Login",
+              "fullTitle": "Login............... User Login",
+              "timedOut": false,
+              "duration": 483,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n    .post('/authaccount/login')\n    .send({\n        \"email\":\"bond007@test.com\",\n        \"password\":'jamesbond'\n    });\nconsole.log(response.body);\nexpect(response.status).to.eql(200);\nexpect(response.body.data.Name).to.eql('Bond 007');\nexpect(response.body.data.Email).to.eql('bond007@test.com');",
+              "err": {},
+              "uuid": "771a0e3e-55ef-4030-89f4-aa716756f1bd",
+              "parentUUID": "83e471f6-67af-474b-a9a6-af67fb6c2d0f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "771a0e3e-55ef-4030-89f4-aa716756f1bd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 483,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

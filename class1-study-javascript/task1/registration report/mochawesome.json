@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-11T07:31:38.813Z",
+    "end": "2022-11-11T07:31:39.346Z",
+    "duration": 533,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d4e3e798-e3c4-4811-97f9-abb1358997cc",
+      "title": "",
+      "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+      "file": "/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b17cfc44-2625-4bf8-921d-c5307b467dc1",
+          "title": "Registration...........",
+          "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+          "file": "/test1.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "User Registration",
+              "fullTitle": "Registration........... User Registration",
+              "timedOut": false,
+              "duration": 530,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n    .post('/authaccount/registration')\n    .send({\n        \"name\":'Bond 007',\n        \"email\":\"bond007@test.com\",\n        \"password\":'jamesbond'\n    });\nconsole.log(response.body);\nexpect(response.status).to.eql(200);\nexpect(response.body.data.Name).to.eql('Bond 007');\nexpect(response.body.data.Email).to.eql('bond007@test.com');",
+              "err": {},
+              "uuid": "35746f61-7d25-431c-ba45-140faca49063",
+              "parentUUID": "b17cfc44-2625-4bf8-921d-c5307b467dc1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "35746f61-7d25-431c-ba45-140faca49063"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 530,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-11-11T08:07:59.106Z",
+    "end": "2022-11-11T08:07:59.647Z",
+    "duration": 541,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c2348531-ce37-4672-a5b4-06d8b344793f",
+      "title": "",
+      "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+      "file": "/test1.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8a7cf1c-9240-465f-8f24-661c1d4b5c78",
+          "title": "Creating.........",
+          "fullFile": "/Users/technologyevermos/Documents/study-javascript/test1.js",
+          "file": "/test1.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Create New User",
+              "fullTitle": "Creating......... Create New User",
+              "timedOut": false,
+              "duration": 539,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await request\n    .post('/users')\n    .set({ Authorization: \"bearer 137f2d35-2558-4506-9465-bcd5c9a7d34d\" })\n    .send({\n        \"name\":\"FBI Agent\",\n        \"email\":\"fbiagent@test.com\",\n        \"location\":'Yogyakarta'\n    });\nconsole.log(response.body);\nexpect(response.status).to.eql(201);\nexpect(response.body.name).to.eql('FBI Agent');\nexpect(response.body.email).to.eql('fbiagent@test.com');\nexpect(response.body.location).to.eql('Yogyakarta');",
+              "err": {},
+              "uuid": "56b93148-3842-40e8-a83c-8f1c9bbc8090",
+              "parentUUID": "c8a7cf1c-9240-465f-8f24-661c1d4b5c78",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "56b93148-3842-40e8-a83c-8f1c9bbc8090"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 539,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
