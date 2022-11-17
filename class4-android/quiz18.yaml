@@ -1,0 +1,88 @@
+appId: evermos.evermos.com.evermos.stag
+env:
+    WA: 856552168890
+    SANDI: cobacoba
+    NAMA_PELANGGAN: Pak Budi
+    HP_Pelanggan: 81234567890
+    ALAMAT: Rumah
+    KOTA: yogyakarta
+    KECAMATAN: gondokusuman
+    KELURAHAN: DI Yogyakarta, Kota Yogyakarta, Kec. Gondokusuman, Kel.Klitren
+---
+- launchApp:
+    clearState: true                                #Clear cache
+- tapOn: 'Izinkan'
+- tapOn: 'Selanjutnya'
+#LOGIN=============================================================
+- tapOn: 'Masuk dengan kata sandi'
+- tapOn: 'Contoh: 87722200714'
+- inputText: ${WA}
+- pressKey: backspace
+- tapOn: "Ketik kata sandi"
+- inputText: ${SANDI}
+- hideKeyboard
+- tapOn: "Masuk"
+- assertVisible:                                    #Assertion
+    text: "Ada yang baru di Evermos!"
+#CEK AKUN=========================================================
+#runFlow: login.yaml
+- tapOn:
+    point: 1220,2670
+- assertVisible:                                    #Assertion
+    text: "Akun Saya"
+#Back to Homepage===================================================
+- tapOn:
+    point: 220,2670
+- scroll
+- tapOn: 'Inthebox'
+- assertVisible:                                   #Assertion
+    text: 'Inthebox'
+- tapOn: 'Jawa Barat'
+#To Product Page====================================================
+- tapOn:
+    point: 440,1000
+- assertVisible:                                   #Assertion
+    text: 'Pesan Sekarang'
+- tapOn: 'Pesan Sekarang'
+- tapOn: '1'
+- pressKey: backspace
+- inputText: '2'
+- pressKey: enter
+- tapOn: 'Masukkan ke Keranjang'
+- assertVisible:
+    text: 'Tambah Data Pelanggan'
+#Data Pelanggan======================================================
+- tapOn: 'Ketik nama lengkap di sini'
+- inputText: ${NAMA_PELANGGAN}
+- tapOn: 'Contoh: 87722200714'
+- inputText: ${HP_PELANGGAN}
+- pressKey: enter
+- tapOn: 'Masukan judul alamat'
+- inputText: ${ALAMAT}
+- tapOn: 'Simpan'
+- tapOn: 'Cari Kota / Kabupaten'
+- inputText: ${KOTA}
+- tapOn: 'Terapkan'
+- tapOn: 'Cari Kelurahan'
+- inputText: ${KECAMATAN}
+- tapOn: ${KELURAHAN}
+- tapOn: 'Terapkan'
+- tapOn: 'Masukan alamat lengkap'
+- inputText: 'Kost GUMUK'
+- tapOn: 'Simpan'
+- assertVisible:
+    text: 'Detail Pengiriman'
+#Checkout===============================================================
+- tapOn: 'Lanjutkan'
+- assertVisible:
+    text: 'Keranjang'
+- tapOn: 'Lanjut ke Checkout'
+- assertVisible:
+    text: 'Checkout'
+- tapOn: 'Lanjutkan ke Pembayaran'
+- assertVisible:
+    text: 'Apakah Pesananmu Sudah Sesuai?'
+- tapOn: 'Bayar'
+- assertVisible:
+    text: 'Pilih Metode Pembayaran'
+- tapOn: 'Danamon Online'
